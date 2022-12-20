@@ -2,7 +2,7 @@
   --main-color: #fff;
   --main-color-alt: #1787e0;
   --section-background: #D9D9D9;
-  --section-background-2: #076A67;
+  --section-background-2: #000000;
   --main-transition: 0.4s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
@@ -14,6 +14,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+@media (max-width:576px) {
+  p{
+    font-size: 15px !important;
+  }
 }
 html{
   scroll-behavior: smooth;
@@ -74,9 +79,9 @@ header {
   background-color: var(--section-background-2);
   color: var(--main-color);
   position: relative;
-  -webkit-box-shadow: 0 0 10px #ddd;
-  -moz-box-shadow: 0 0 10px #ddd;
-  box-shadow: 0 0 10px #ddd;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
   z-index: 999;
 }
 header nav{
@@ -198,10 +203,9 @@ header ul a:hover{
 }
 /* End Header  *******************************************************/
 
-/* End Hero section */
+/* Start Hero section  && Our philosophy */
 .hero{
-  padding-top:50px;
-  background-color: rgba(7, 106, 103,.4);
+  padding:50px 0;
 }
 .hero .container{
   display: flex;
@@ -217,6 +221,7 @@ header ul a:hover{
     gap: 50px;
   }
 }
+
 .hero .content{
   line-height: 1.5;
   max-width: 500px;
@@ -225,6 +230,7 @@ header ul a:hover{
   font-size:2.5rem;
   margin-bottom:10px;
 }
+
 .hero .content p{
   margin-bottom:10px;
 }
@@ -233,4 +239,92 @@ header ul a:hover{
     order: 2;
   }
 }
-/* End Hero section **************************************************/
+/* End Hero section  **************************************************/
+/* Start Our philosophy section */
+.philosophy{
+  padding: 50px 0;
+}
+.philosophy .container-fluid{
+  display: flex;
+  max-width: 1117px;
+  margin: 0 auto;
+  gap: 40px;
+}
+@media (max-width:992px) {
+  .philosophy .container-fluid{
+    flex-direction: column;
+  }
+}
+.philosophy .content{
+  padding-left: 15px;
+  flex: 1;
+}
+@media (max-width:992px) {
+  .philosophy .content{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .philosophy h2{
+    text-align: center;
+  }
+}
+.philosophy .photograph{
+  padding-right: 15px;
+  flex: 1;
+}
+.philosophy  img{
+  width: 100%;
+  max-height: 700px !important;
+}
+@media (max-width:992px){
+  .philosophy .photograph{
+    padding-right: 0px;
+  }
+  .philosophy  img{
+    max-height: 500px !important;
+  }
+}
+.philosophy h2{
+  font-size: 2.5rem;
+  margin-bottom:20px;
+}
+.content p{
+  line-height: 2;
+}
+/* End Our philosophy section */
+/* Start where section */
+.where{
+  padding: 50px 0;
+  background:url("../images/pricing-bg.png");
+  background-repeat: no-repeat;
+
+  color: white;
+}
+.where .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  line-height: 1.4;
+}
+.where .info{
+  flex: 1;
+}
+
+.where h2{
+  font-size:2.5rem;
+}
+
+.where  img{
+  max-width: 300px;
+  border-radius: 5px;
+}
+@media (max-width:767px) {
+  .where .container{
+    flex-direction: column;
+  }
+  .where img{
+    max-width: 500px;
+  }
+}
+/* End where section */
