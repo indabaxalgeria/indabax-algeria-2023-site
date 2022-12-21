@@ -41,3 +41,35 @@ mainNavLi.forEach((a)=>{
     }
   })
 })
+
+// Program section
+let schudelWraper = document.querySelector(".schude-wrapper");
+let schudel = document.querySelector(".schudel");
+let date = document.querySelectorAll(".date");
+let multipEvent = document.querySelectorAll(".multipe-event");
+let lastDayInfo = document.querySelector(".last-info");
+let line = document.querySelector(".line");
+let controlScudel = document.getElementById("showSchudle");
+
+console.log(schudel.offsetHeight)
+
+
+line.style.height = `calc(100% - ${lastDayInfo.offsetHeight / 2 + 1}px)`
+controlScudel.addEventListener("click",()=>{
+  controlScudel.classList.toggle("open");
+  if(controlScudel.classList.contains("open")){
+    schudelWraper.style.cssText = `max-height: 0`;
+    multipEvent.forEach((e)=>{
+      e.classList.remove("animated");
+    })
+  }else{
+    animatedSchudel()
+  }
+})
+
+function animatedSchudel(){
+  schudelWraper.style.cssText = `max-height: ${schudel.offsetHeight + 20}px`;
+  multipEvent.forEach((e)=>{
+    e.classList.add("animated");
+  })
+}

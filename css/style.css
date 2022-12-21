@@ -7,10 +7,6 @@
 
 }
 @font-face {
-  font-family: "colfax";
-  src: url("../colfax-font/colfax-regular.woff2");
-}
-@font-face {
   font-family: "char";
   src: url("../colfax-font/charter_regular.woff2");
 }
@@ -31,13 +27,16 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  font-family: 'colfax','char', sans-serif;
+  font-family: 'char', sans-serif;
   font-size: 20px;
 }
 .no-scroll {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+h2{
+  font-size: 2.5rem;
 }
 .container{
   padding-left: 15px;
@@ -249,7 +248,7 @@ header ul a:hover{
 /* End Hero section  **************************************************/
 /* Start Our philosophy section */
 .philosophy{
-  padding: 50px 0;
+  padding: 100px 0;
 }
 .philosophy .container-fluid{
   display: flex;
@@ -295,7 +294,6 @@ header ul a:hover{
   }
 }
 .philosophy h2{
-  font-size: 2.5rem;
   margin-bottom:20px;
 }
 .content p{
@@ -308,6 +306,7 @@ header ul a:hover{
   background:url("../images/pricing-bg.png"),#282828;
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
 
   color: white;
 }
@@ -325,7 +324,22 @@ header ul a:hover{
 .where h2{
   font-size:2.5rem;
 }
-
+.where svg:last-of-type{
+  width: 100%;
+  height: 100px;
+  color: #282828;
+  position: absolute;
+  top: -100px;
+  left: 0;
+}
+.where svg:first-of-type{
+  width: 100%;
+  height: 100px;
+  color: #282828;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+}
 .where  img{
   max-width: 300px;
   border-radius: 5px;
@@ -338,4 +352,95 @@ header ul a:hover{
     max-width: 500px;
   }
 }
-/* End where section */
+/* End where section *************************************/
+/* Start program section */
+.program{
+  padding: 100px 0;
+  min-height: 1000px;
+}
+.program h2{
+  padding: 30px 0;
+}
+.program p{
+  max-width: 400px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+.program #showSchudle{
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid var(--section-background-2);
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+.program .schude-wrapper{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in;
+}
+.program .schudel{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.program .line{
+  position: absolute;
+  width: 2px;
+  background-color: var(--section-background-2);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.program .date{
+  width: fit-content;
+  height: 110px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.program .date-id{
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  border: 2px solid var(--section-background-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.day-info{
+  width: fit-content;
+  background-color: var(--main-color);
+  padding: 10px 30px;
+  border: 2px solid var(--section-background-2);
+}
+.multipe-event{
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  position: relative;
+  transition:  gap 2s ease;
+}
+.multipe-event.animated{
+  gap: 30px;
+}
+.multipe-event::before{
+  content: "";
+  position: absolute;
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: var(--section-background-2);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  z-index: -1;
+}
+/* End program section *************************/
