@@ -26,6 +26,9 @@
 html{
   scroll-behavior: smooth;
 }
+html,body{
+  overflow-x: hidden;
+}
 body{
   font-family: 'char', sans-serif;
   font-size: 20px;
