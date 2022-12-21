@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesom style -->
+  <link rel="stylesheet" href="css/all.min.css">
   <!-- css flie -->
   <link rel="stylesheet" href="css/style.css">
   <title>Indabax dz</title>
@@ -81,33 +83,70 @@
   <!-- Start Program section -->
   <section id="program" class="program">
     <div class="container">
-      <h2>Our Schudel</h2>
+      <div class="txt">
+        <h2>Our Schudel</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quis quidem sed provident expedita repudiandae ipsa minus, est repellendus quibusdam esse nisi cupiditate beatae ipsam. Maxime eligendi tempore quia eos!</p>
-      <div id="showSchudle">Show Schudle</div>
+      </div>
+      <div id="showSchudle" class="main-btn"><span>Show Schudle</span> <i class="fa-solid fa-chevron-down chevron-target"></i></div>
       <div class="schude-wrapper">
         <div class="schudel">
           <div class="line"></div>
           <div class="date date-one">
             <div class="date-id">01</div>
-            <div class="day-info">Event 01</div>
+            <div class="day-info">
+              <p class="day-tooltip bottom">
+                some information 
+              </p>
+              Event 01
+            </div>
           </div>
           <div class="date date-two">
             <div class="date-id">02</div>
             <div class="multipe-event">
-              <div class="day-info">Event 03</div> 
-              <div class="day-info">Event 02</div> 
-              <div class="day-info">Event 04</div> 
+              <div class="day-info">
+                <p class="day-tooltip left">
+                  some information
+                </p>
+                Event 03
+              </div> 
+              <div class="day-info">
+                <p class="day-tooltip bottom">
+                  some information
+                </p>
+                Event 02
+              </div> 
+              <div class="day-info">
+                <p class="day-tooltip right">
+                  some information 
+                </p>
+                Event 04
+              </div> 
             </div>
           </div>
           <div class="date date-three">
             <div class="date-id">03</div>
-            <div class="day-info">Event 05</div>
+            <div class="day-info">
+              <p class="day-tooltip bottom">
+                some information
+              </p>
+              Event 05
+            </div>
           </div>
           <div class="date date-four">
             <div class="date-id">04</div>
             <div class="multipe-event">
-              <div class="day-info last-info">Event 06</div> 
-              <div class="day-info">Event 07</div> 
+              <div class="day-info last-info">
+                <p class="day-tooltip left">
+                  some information
+                </p>
+                Event 06
+              </div> 
+              <div class="day-info">
+                <p class="day-tooltip right">
+                  some information
+                </p>
+                Event 07
+              </div> 
             </div>
           </div>
         </div>
@@ -115,6 +154,50 @@
     </div>
   </section>
   <!-- End Program section -->
+  <!-- Start Our Guest -->
+  <section id="guest" class="guest">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
+      <path d="M1441 20.6643C729.8 20.6643 413 91.1311 0 180V-1.52588e-05H1441V20.6643Z" fill="currentColor"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
+        <path d="M1441 159.336C729.8 159.336 413 88.8689 0 0V180H1441V159.336Z" fill="currentColor"></path>
+        </svg>
+    <div class="container">
+      <div class="our-guest">
+        <h2>They will Be there</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime illum adipisci doloremque asperiores non veritatis consequuntur ea inventore quasi harum? Tempore fugiat adipisci accusamus beatae minus vero voluptatem aliquam facilis!</p>
+      </div>
+      <picture>
+        <img src="images/cat-03.jpg" alt="">
+      </picture>
+    </div>
+  </section>
+  <!-- End Our Guest -->
+  <!-- Start Apply  -->
+  <section id="apply" class="apply">
+    <div class="container">
+      <div class="wrapper">
+        <h2>Apply As</h2>
+        <div class="btn">
+          <button class="main-btn"><a href="#">Speaker</a></button>
+          <button class="main-btn"><a href="#">Attender</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Apply  -->
+  <!-- Start Footer -->
+  <footer>
+    <div class="container">
+      <div class="content-wraper">
+        <h2>Want Help ?</h2>
+      <div class="contact">
+        <p>Contact us on</p> <a href="#">aievent@gmail.com</a>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
   <!-- js file -->
   <script src="js/script.js"></script>
 </body>
