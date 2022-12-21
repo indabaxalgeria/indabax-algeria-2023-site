@@ -644,3 +644,34 @@ footer .contact a{
   color: var(--section-background-2);
 }
 /* Start Footet **********************************/
+
+/* Start Animation On scrolling */
+.show-onload{
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 1s;
+}
+.show{
+  filter: blur(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.sh-r{
+  opacity: 0;
+  transform: translate(30%,0px);
+  transition: all 1s;
+}
+.sh-l{
+  opacity: 0;
+  transform: translate(-30%,0px);
+  transition: all 1s;
+}
+.sh-b{
+  opacity: 0;
+  transform: translate(0%,30%);
+  transition: all 1s;
+}
+.show-sh{
+  opacity: 1;
+  transform: translate(0,0);
+}

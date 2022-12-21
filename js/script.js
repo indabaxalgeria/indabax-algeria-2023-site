@@ -80,3 +80,20 @@ function animatedSchudel(){
     e.classList.add("animated");
   })
 }
+
+// // animation on scrolling
+let hiddenElements = document.querySelectorAll(".sh");
+const observer = new IntersectionObserver((e)=>{
+  e.forEach((entery)=>{
+    if(entery.isIntersecting){
+      entery.target.classList.add("show-sh");
+      entery.target.classList.add("one-sh");
+    }
+  })
+})
+
+hiddenElements.forEach((el)=>{
+  if(!el.classList.contains("one-sh")){
+    observer.observe(el);
+  }
+})
