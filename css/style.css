@@ -23,8 +23,11 @@ h2{
   p{
     font-size: 17px !important;
   }
-  h2{
-    font-size: 2.3rem !important;
+  h1{
+    letter-spacing: 5px !important;
+  }
+  h2,h1{
+    font-size: 1.6rem !important;
   }
 }
 html{
@@ -120,40 +123,34 @@ ul{
 }
 /* Start Header  */
 header {
-  background-color: var(--section-background-2);
-  color: var(--main-color);
   position: relative;
-  -webkit-box-shadow: 0 0 10px #000;
-  -moz-box-shadow: 0 0 10px #000;
-  box-shadow: 0 0 10px #000;
+  padding: 20px 0;
   z-index: 999;
 }
 header nav{
   display:flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header nav .logo{
-  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
-  height: 62px;
 }
+
 header .main-nav{
   display: flex;
 }
 @media (max-width:767px) {
+  header nav{
+    justify-content: end;
+  }
   header .main-nav{
     flex-direction: column;
     position: absolute;
-    background-color: var(--section-background-2);
-    top: 62px;
+    background-color: var(--main-color);
+    top: 0px;
     right: -100%;
     width: 70%;
     height:calc(100vh);
-    padding: 20px 0;
+    padding-top: 80px;
     gap: 20px;
+    color: var(--section-background-2);
     align-items: center;
     z-index: 999;
     transition: var(--main-transition) ;
@@ -190,7 +187,7 @@ header ul a:hover{
   position: relative;
   width: 100%;
   height: 2px;
-  background:var(--main-color);
+  background:var(--section-background-2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,6 +248,19 @@ header ul a:hover{
 .hero{
   padding:50px 0;
 }
+.hero .main-title{
+  font-size: 4rem;
+  letter-spacing: -4px;
+  text-align: center;
+  margin-top: 2rem; 
+  margin-bottom: 3rem;
+  opacity: 0;
+  transition: all 1s;
+}
+.hero .main-title.fadeUp{
+  letter-spacing: 8px;
+  opacity: 1 !important;
+}
 .hero .container{
   display: flex;
   padding: 40px;
@@ -270,7 +280,7 @@ header ul a:hover{
   line-height: 1.5;
   max-width: 500px;
 }
-.hero .content h1{
+.hero .content h2{
   font-size:2.5rem;
   margin-bottom:10px;
   overflow: hidden;
@@ -348,9 +358,7 @@ header ul a:hover{
 /* Start where section */
 .where{
   padding: 50px 0;
-  background:url("../images/pricing-bg.png"),#282828;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: var(--section-background-2);
   position: relative;
   color: white;
 }
@@ -367,21 +375,22 @@ header ul a:hover{
 
 .where h2{
   font-size:2.5rem;
+  margin-bottom: 20px;
 }
 .where svg:last-of-type{
   width: 100%;
   height: 100px;
-  color: #282828;
+  color: var(--section-background-2);
   position: absolute;
-  top: -100px;
+  top: -90px;
   left: 0;
 }
 .where svg:first-of-type{
   width: 100%;
   height: 100px;
-  color: #282828;
+  color: var(--section-background-2);
   position: absolute;
-  bottom: -100px;
+  bottom: -90px;
   left: 0;
 }
 .where  img{
@@ -532,9 +541,7 @@ header ul a:hover{
 .guest{
   padding: 100px 0;
   margin-top: 100px;
-  background:url("../images/pricing-bg.png"),#282828;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: var(--section-background-2);
   position: relative;
   color: var(--main-color);
 }
@@ -547,20 +554,23 @@ header ul a:hover{
 .guest svg:last-of-type{
   width: 100%;
   height: 100px;
-  color: #282828;
+  color: var(--section-background-2);
   position: absolute;
   transform: rotateY(180deg);
-  top: -100px;
+  top: -90px;
   left: 0;
 }
 .guest svg:first-of-type{
   width: 100%;
   height: 110px;
-  color: #282828;
+  color: var(--section-background-2);
   position: absolute;
   transform: rotateY(180deg);
-  bottom: -100px;
+  bottom: -90px;
   left: 0;
+}
+.guest h2{
+  margin-bottom: 20px;
 }
 .guest  img{
   max-width: 300px;

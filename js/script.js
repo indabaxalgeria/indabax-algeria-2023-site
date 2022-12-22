@@ -53,7 +53,6 @@ let controlScudel = document.getElementById("showSchudle");
 let text  = document.querySelector(".txt");
 let chevron = document.querySelector(".chevron-target");
 
-console.log(controlScudel.textContent)
 document.querySelector(".program").style.cssText = `min-height:${schudel.offsetHeight + text.offsetHeigh}px`
 
 line.style.height = `calc(100% - ${lastDayInfo.offsetHeight / 2 + 1}px)`;
@@ -88,6 +87,9 @@ const observer = new IntersectionObserver((e)=>{
     if(entery.isIntersecting){
       entery.target.classList.add("show-sh");
       entery.target.classList.add("one-sh");
+      if(entery.target.classList.contains("main-title")){
+        entery.target.classList.add("fadeUp");
+      }
     }
   })
 })
