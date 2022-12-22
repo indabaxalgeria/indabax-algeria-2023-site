@@ -261,6 +261,9 @@ header ul a:hover{
   letter-spacing: 8px;
   opacity: 1 !important;
 }
+.hero .main-title span{
+  white-space: nowrap;
+}
 .hero .container{
   display: flex;
   padding: 40px;
@@ -649,8 +652,9 @@ footer .contact{
 footer .contact a{
   background-color: #e8e8e8;
   border-radius: 25px;
-  padding: 5px 20px;
   width: fit-content;
+  height: 30px;
+  padding: 0 20px;
   color: var(--section-background-2);
 }
 /* Start Footet **********************************/
