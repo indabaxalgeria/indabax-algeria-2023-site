@@ -49,7 +49,7 @@ let date = document.querySelectorAll(".date");
 let multipEvent = document.querySelectorAll(".multipe-event");
 let lastDayInfo = document.querySelector(".last-info");
 let line = document.querySelector(".line");
-let controlScudel = document.getElementById("showSchudle");
+let controlScudel = document.getElementById("showschedule");
 let text  = document.querySelector(".txt");
 let chevron = document.querySelector(".chevron-target");
 
@@ -61,13 +61,13 @@ controlScudel.addEventListener("click",()=>{
     chevron.classList.toggle("fa-chevron-down");
     chevron.classList.toggle("fa-chevron-up");
   if(controlScudel.classList.contains("open")){
-    controlScudel.firstElementChild.textContent = "Show Schudel";
+    controlScudel.firstElementChild.textContent = "Show program";
     schudelWraper.style.cssText = `max-height: 0`;
     multipEvent.forEach((e)=>{
       e.classList.remove("animated");
     })
   }else{
-    controlScudel.firstElementChild.textContent = "Hide Schudel";
+    controlScudel.firstElementChild.textContent = "Hide program";
     animatedSchudel()
   }
   controlScudel.classList.toggle("open");
